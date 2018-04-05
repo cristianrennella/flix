@@ -1,0 +1,24 @@
+%section#top-header.row
+  %h1.col-md-2
+    = link_to "MyFLiX"
+  %ul.col-md-4.clearfix
+    - if logged_in?
+      %li= link_to "Videos", videos_path
+      %li= link_to "My Queue", my_queue_path
+      %li= link_to "People", people_path
+  - if logged_in?
+    =form_tag search_videos_path, class: "col-md-5.navbar-form", method: 'get' do
+      %input.form-control(type="text" placeholder="Search for videos here" name="search_term")
+      %button.btn.btn-default(type="submit") Search
+      #user_links.pull-right
+        %ul
+          %li.dropdown
+            %a(href="#" id="dlabel" role="button" data-toggle="dropdown" class="dropdown-toggle" data-target="#")
+              "Welcome, #{current_user.username}"
+              %b.caret
+              %ul.dropdown-menu(role="menu" aria-labelledby="dlabel")
+                %li
+                  %a(href="#") Account
+                  %a(href="#") Plan and Billing
+                  = link_to 'Logout', logout_path
+

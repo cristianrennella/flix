@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+<head>
+<title>MyFLiX - a video on demand service</title>
+<meta charset='UTF-8'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+
+<link href="/assets/application.css" media="screen" rel="stylesheet" />
+<script src="/assets/application.js"></script>
+</head>
+<body>
+<header>
+<section class='row' id='top-header'>
+<h1 class='col-md-2'>
+<a href="/home">MyFLiX</a>
+</h1>
+<ul class='col-md-4 clearfix'>
+<li><a href="/videos">Videos</a></li>
+<li><a href="/my_queue">My Queue</a></li>
+<li><a href="/home">People</a></li>
+</ul>
+<form accept-charset="UTF-8" action="/videos/search" class="col-md-5.navbar-form" method="get"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+<input class='form-control' name='search_term' placeholder='Search for videos here' type='text'>
+<button class='btn btn-default' type='submit'>Search</button>
+<div class='pull-right' id='user_links'>
+<ul>
+<li class='dropdown'>
+<a class='dropdown-toggle' data-target='#' data-toggle='dropdown' href='#' id='dlabel' role='button'>
+"Welcome, Miss Queenie Towne"
+<b class='caret'></b>
+<ul aria-labelledby='dlabel' class='dropdown-menu' role='menu'>
+<li>
+<a href='#'>Account</a>
+<a href='#'>Plan and Billing</a>
+<a href="/logout">Logout</a>
+</li>
+</ul>
+</a>
+</li>
+</ul>
+</div>
+</form>
+
+</section>
+
+</header>
+<section class='content clearfix'>
+<div class='alert alert-success'>
+<a class='close' data-dismiss='alert'>&#215;</a>
+<div id="flash_success">Welcome!.</div>
+</div>
+
+<article class='video_category'>
+<header>
+<h3><a href="/categories/1174">velit</a></h3>
+</header>
+<div class='videos row'>
+<div class='video col-sm-2'>
+<a href="/videos/9475"><img src='tmp/'>
+</a></div>
+<div class='video col-sm-2'>
+<a href="/videos/9474"><img src='tmp/'>
+</a></div>
+<div class='video col-sm-2'>
+<a href="/videos/9473"><img src='tmp/'>
+</a></div>
+</div>
+</article>
+
+</section>
+<footer>
+&copy 2017 MyFLiX
+</footer>
+</body>
+</html>

@@ -1,0 +1,19 @@
+%section.new_video
+	%h3 Add a new video
+	= my_form_for @video do |f|
+		= f.label :title, "Title"
+		= f.text_field :title
+		= f.label :description, "Description"
+		= f.text_area :description, rows: 6
+		%br
+		= f.submit "Add this video"
+
+/ %section.new_video
+/ 	%h3 Add a new video
+/ 	= form_for @video, builder: MyFormBuilder do |f|
+/ 		= f.label :title, "Title"
+/ 		= f.text_field :title
+/ 		= f.label :description, "Description"
+/ 		= f.text_area :description, rows: 6
+/ 		%br
+/ 		= f.submit "Add this video"

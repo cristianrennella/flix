@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+<head>
+<title>MyFLiX - a video on demand service</title>
+<meta charset='UTF-8'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+
+<link href="/assets/application.css" media="screen" rel="stylesheet" />
+<script src="/assets/application.js"></script>
+</head>
+<body>
+<header>
+<section class='row' id='top-header'>
+<h1 class='col-md-2'>
+<a href="/my_queue">MyFLiX</a>
+</h1>
+<ul class='col-md-4 clearfix'>
+<li><a href="/videos">Videos</a></li>
+<li><a href="/my_queue">My Queue</a></li>
+<li><a href="/my_queue">People</a></li>
+</ul>
+<form accept-charset="UTF-8" action="/videos/search" class="col-md-5.navbar-form" method="get"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+<input class='form-control' name='search_term' placeholder='Search for videos here' type='text'>
+<button class='btn btn-default' type='submit'>Search</button>
+<div class='pull-right' id='user_links'>
+<ul>
+<li class='dropdown'>
+<a class='dropdown-toggle' data-target='#' data-toggle='dropdown' href='#' id='dlabel' role='button'>
+"Welcome, Alisa Watsica"
+<b class='caret'></b>
+<ul aria-labelledby='dlabel' class='dropdown-menu' role='menu'>
+<li>
+<a href='#'>Account</a>
+<a href='#'>Plan and Billing</a>
+<a href="/logout">Logout</a>
+</li>
+</ul>
+</a>
+</li>
+</ul>
+</div>
+</form>
+
+</section>
+
+</header>
+<section class='content clearfix'>
+
+<section class='my_queue container'>
+<div class='row'>
+<div class='col-sm-10 col-sm-offset-1'>
+<article>
+<header>
+<h2>My Queue</h2>
+</header>
+<form accept-charset="UTF-8" action="/update_queue" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+<table class='table'>
+<thead>
+<tr>
+<th width='10%'>List Order</th>
+<th width='30%'>Video Title</th>
+<th width='10%'>Play</th>
+<th width='20%'>Rating</th>
+<th width='15%'>Genre</th>
+<th width='15%'>Remove</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<input id="queue_items__id" name="queue_items[][id]" type="hidden" value="3592" />
+<td><input class="form-control" id="queue_items__position" name="queue_items[][position]" type="text" value="1" /></td>
+<td>
+<a href="/videos/9315">ut commodi eos blanditiis corporis</a>
+</td>
+<td>
+<form action="/my_queue" class="button_to" method="post"><div><input class="btn btn-default" type="submit" value="Play" /></div></form>
+</td>
+<td><select id="queue_items__rating" name="queue_items[][rating]"><option value=""></option><option value="1">1 Star</option>
+<option value="2">2 Stars</option>
+<option value="3">3 Stars</option>
+<option value="4">4 Stars</option>
+<option value="5">5 Stars</option></select></td>
+<td>
+<a href="/categories/1148">actions</a>
+</td>
+<td>
+<!-- = link_to queue_item_path(id: queue_item.id), method: :delete do - is the same as the following -->
+<a data-method="delete" href="/queue_items/3592" rel="nofollow"><i class='glyphicon glyphicon-remove'></i>
+</a></td>
+</tr>
+<tr>
+<input id="queue_items__id" name="queue_items[][id]" type="hidden" value="3593" />
+<td><input class="form-control" id="queue_items__position" name="queue_items[][position]" type="text" value="2" /></td>
+<td>
+<a href="/videos/9316">nesciunt quas impedit atque vitae</a>
+</td>
+<td>
+<form action="/my_queue" class="button_to" method="post"><div><input class="btn btn-default" type="submit" value="Play" /></div></form>
+</td>
+<td><select id="queue_items__rating" name="queue_items[][rating]"><option value=""></option><option value="1">1 Star</option>
+<option value="2">2 Stars</option>
+<option value="3">3 Stars</option>
+<option value="4">4 Stars</option>
+<option value="5">5 Stars</option></select></td>
+<td>
+<a href="/categories/1148">actions</a>
+</td>
+<td>
+<!-- = link_to queue_item_path(id: queue_item.id), method: :delete do - is the same as the following -->
+<a data-method="delete" href="/queue_items/3593" rel="nofollow"><i class='glyphicon glyphicon-remove'></i>
+</a></td>
+</tr>
+<tr>
+<input id="queue_items__id" name="queue_items[][id]" type="hidden" value="3594" />
+<td><input class="form-control" id="queue_items__position" name="queue_items[][position]" type="text" value="3" /></td>
+<td>
+<a href="/videos/9317">rem eaque laborum deleniti et</a>
+</td>
+<td>
+<form action="/my_queue" class="button_to" method="post"><div><input class="btn btn-default" type="submit" value="Play" /></div></form>
+</td>
+<td><select id="queue_items__rating" name="queue_items[][rating]"><option value=""></option><option value="1">1 Star</option>
+<option value="2">2 Stars</option>
+<option value="3">3 Stars</option>
+<option value="4">4 Stars</option>
+<option value="5">5 Stars</option></select></td>
+<td>
+<a href="/categories/1148">actions</a>
+</td>
+<td>
+<!-- = link_to queue_item_path(id: queue_item.id), method: :delete do - is the same as the following -->
+<a data-method="delete" href="/queue_items/3594" rel="nofollow"><i class='glyphicon glyphicon-remove'></i>
+</a></td>
+</tr>
+</tbody>
+</table>
+<input class="btn btn-default" name="commit" type="submit" value="Update Instant Queue" />
+</form>
+
+</article>
+</div>
+</div>
+</section>
+
+</section>
+<footer>
+&copy 2017 MyFLiX
+</footer>
+</body>
+</html>
